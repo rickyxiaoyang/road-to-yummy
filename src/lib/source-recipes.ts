@@ -1,3 +1,5 @@
+import { CMSClient } from "./api";
+
 type Ingredient = {
   id: string;
   ingredient: string;
@@ -19,11 +21,10 @@ type Recipe = {
   createdAt: string;
   updatedAt: string;
 };
-// TODO: add validation
-export async function sourceRecipes(): Promise<Recipe[]> {
-  const response = await fetch(`${process.env.CMS_URL}/api/recipes`);
-  if (!response.ok) {
-    throw new Error(`Failed to fetch recipes: ${response.statusText}`);
-  }
-  return (await response.json()) as Recipe[];
+
+export async function getRecipes(): Promise<Recipe[]> {
+  const client = new CMSClient();
+  const json = await client.get<{ docs: Recipe[] }>("/api/recipes");
+  const recipes = json.docs;
+  return recipes;
 }
