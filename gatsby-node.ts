@@ -6,7 +6,7 @@ export const createPages = async ({ actions }: { actions: any }) => {
   const recipes = await getRecipes();
   recipes.forEach((recipe) => {
     createPage({
-      path: `${recipe.slug}`,
+      path: `recipe/${recipe.slug}`,
       component: template,
       context: {
         ...recipe,
