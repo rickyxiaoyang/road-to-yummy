@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Recipe } from "../../lib/recipes";
 import { byDateDescending } from "../../lib/utils";
+import RecipeCard from "./RecipeCard";
 
 const pageQuery = graphql`
   query RecipeList {
@@ -25,12 +26,8 @@ export default function RecipeList() {
   return (
     <div className="">
       {recipes.sort(byDateDescending).map((recipe) => (
-        <div key={recipe.slug}>
-          {/* <RecipeItem recipe={recipe.frontmatter} /> */}
-          <div>{recipe.title}</div>
-        </div>
+        <RecipeCard key={recipe.slug} recipe={recipe} />
       ))}
-      {JSON.stringify(data, null, 2)}
     </div>
   );
 }
