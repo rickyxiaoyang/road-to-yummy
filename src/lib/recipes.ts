@@ -7,7 +7,7 @@ type Ingredient = {
   unit: string; // TODO: replace with convert-units typing
 };
 
-type Recipe = {
+export type Recipe = {
   id: number;
   published: boolean;
   title: string;

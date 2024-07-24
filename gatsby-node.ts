@@ -1,5 +1,5 @@
 import path from "path";
-import { getRecipes } from "./src/lib/source-recipes";
+import { getRecipes } from "./src/lib/recipes";
 import { CreatePagesArgs, GatsbyNode } from "gatsby";
 
 export const createPages: GatsbyNode["createPages"] = async ({
