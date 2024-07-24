@@ -11,6 +11,8 @@ export type Recipe = {
   id: number;
   published: boolean;
   title: string;
+  image_url: string;
+  short_description: string;
   slug: string;
   date: string;
   description: string;

@@ -24,7 +24,7 @@ export default function RecipeList() {
   ) as Recipe[];
 
   return (
-    <div className="">
+    <div className="flex flex-col gap-2 items-center">
       {recipes.sort(byDateDescending).map((recipe) => (
         <RecipeCard key={recipe.slug} recipe={recipe} />
       ))}
