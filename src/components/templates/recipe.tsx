@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import type { PageProps } from "gatsby";
+import type { HeadFC, PageProps } from "gatsby";
 import PageContainer from "../shared/PageContainer";
 import { slateToHtml } from "@slate-serializers/html";
 import { Recipe } from "../../lib/recipes";
@@ -50,3 +50,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+export const Head: HeadFC = ({ pageContext }) => {
+  const recipe = pageContext as Recipe;
+  return <title>{recipe.title} | Road to Yummy</title>;
+};
