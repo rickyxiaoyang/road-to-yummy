@@ -13,6 +13,13 @@ I found myself skipping the documentation process of a recipe when cooking. I fe
 
 This new version was going to be different: better tech, more user friendly, and will hopefully encourage me (and my wife!) to write down more of my recipes.
 
+### Technical Architecture
+
+- Gatsby / React
+- Content Management System (Payload CMS)
+- Tailwind for styling
+- SlateJS for rich text formatting
+
 ### Key Points / Learnings
 
 Whenever I'd return to the RTY project, I'd always forget the structure and have to relearn much of the framework.
