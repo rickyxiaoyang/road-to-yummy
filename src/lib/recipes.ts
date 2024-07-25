@@ -15,7 +15,7 @@ export type Recipe = {
   short_description: string;
   slug: string;
   date: string;
-  description: string;
+  description: any[];
   ingredients: Ingredient[];
   directions: any;
   categories: string[];

@@ -13,6 +13,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       component: template,
       context: {
         ...recipe,
+        siteId: `SitePage /recipe/${recipe.slug}/`,
       },
     });
   });
