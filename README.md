@@ -5,7 +5,17 @@
   But this time, powered by a CMS.
 </h3>
 
+### Motivation
+
+When I previously built Road to Yummy, it was also built on gatsby but using markdown files to render pages. This was nice and simple to set up, but there were a few problems.
+
+I found myself skipping the documentation process of a recipe when cooking. I felt there was too much friction in the process: I had to go into my codebase, add a new file, re-learn the markdown and frontmatter structure, and then write the recipe. On top of that, my wife didn't have an interface to write it.
+
+This new version was going to be different: better tech, more user friendly, and will hopefully encourage me (and my wife!) to write down more of my recipes.
+
 ### Key Points / Learnings
+
+Whenever I'd return to the RTY project, I'd always forget the structure and have to relearn much of the framework.
 
 As I'm developing this app, I'll jot down useful notes for when I return to maintain this project.
 
