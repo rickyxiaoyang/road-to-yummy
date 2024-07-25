@@ -20,21 +20,27 @@ function RecipeTemplate({
 }: PageProps<DataProps>) {
   const { title, date, image_url, description } = recipe;
   const dateString = new Date(date).toLocaleDateString();
+
+  const bodyContent = (
+    <div className="flex flex-col gap-8">
+      {image_url && <img src={image_url} />}
+      <div
+        className="rich-text flex flex-col gap-2"
+        dangerouslySetInnerHTML={{ __html: slateToHtml(description) }}
+      ></div>
+      {/* Ingredients */}
+      <Ingredients ingredients={recipe.ingredients} />
+      {/* Directions */}
+      <Directions directions={recipe.directions} />
+    </div>
+  );
   return (
     <PageContainer>
       <div className="max-w-screen-lg mx-auto">
-        <h1 className="text-2xl font-bold">{title}</h1>
-        <div>{dateString}</div>
-        <div className="flex flex-col gap-8">
-          {image_url && <img src={image_url} />}
-          <div
-            className="rich-text flex flex-col gap-2"
-            dangerouslySetInnerHTML={{ __html: slateToHtml(description) }}
-          ></div>
-          {/* Ingredients */}
-          <Ingredients ingredients={recipe.ingredients} />
-          {/* Directions */}
-          <Directions directions={recipe.directions} />
+        <div className="flex flex-col gap-4">
+          <h1 className="text-2xl font-bold">{title}</h1>
+          <div>{dateString}</div>
+          {bodyContent}
         </div>
       </div>
     </PageContainer>
