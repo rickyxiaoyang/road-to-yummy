@@ -5,7 +5,7 @@ import { CreatePagesArgs, GatsbyNode } from "gatsby";
 export const createPages: GatsbyNode["createPages"] = async ({
   actions: { createPage },
 }: CreatePagesArgs) => {
-  const template = path.resolve(`src/templates/recipe.tsx`);
+  const template = path.resolve(`src/components/templates/recipe.tsx`);
   const recipes = await getRecipes();
   recipes.forEach((recipe) => {
     createPage({

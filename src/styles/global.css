@@ -15,4 +15,7 @@
   html {
     @apply font-sans;
   }
+  .rich-text a {
+    @apply underline hover:text-yellow-500 transition-all;
+  }
 }

@@ -7,6 +7,13 @@ export type Ingredient = {
   unit: string; // TODO: replace with convert-units typing
 };
 
+export type RichText = any[];
+
+export type Direction = {
+  id: string;
+  direction_step_description: RichText;
+};
+
 export type Recipe = {
   id: number;
   published: boolean;
@@ -17,7 +24,7 @@ export type Recipe = {
   date: string;
   description: any[];
   ingredients: Ingredient[];
-  directions: any;
+  directions: Direction[];
   categories: string[];
   tags: string[];
   createdAt: string;
