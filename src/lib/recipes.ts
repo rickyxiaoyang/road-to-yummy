@@ -1,6 +1,6 @@
 import { CMSClient } from "./api";
 
-type Ingredient = {
+export type Ingredient = {
   id: string;
   ingredient: string;
   quantity: number;

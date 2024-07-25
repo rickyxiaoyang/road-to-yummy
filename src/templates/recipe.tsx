@@ -4,6 +4,7 @@ import type { PageProps } from "gatsby";
 import PageContainer from "../components/shared/PageContainer";
 import { slateToHtml } from "@slate-serializers/html";
 import { Recipe } from "../lib/recipes";
+import Ingredients from "../components/recipes/Ingredients";
 
 type DataProps = {
   sitePage: {
@@ -23,9 +24,10 @@ function RecipeTemplate({
       <h1 className="text-2xl font-bold">{title}</h1>
       <div>{dateString}</div>
       {image_url && <img src={image_url} />}
-      {/* <div className="text-base">{description}</div> */}
       <div dangerouslySetInnerHTML={{ __html: slateToHtml(description) }}></div>
-      {/* <pre>{JSON.stringify(description, null, 2)}</pre> */}
+      {/* Ingredients */}
+      <Ingredients ingredients={recipe.ingredients} />
+      {/* Directions */}
     </PageContainer>
   );
 }

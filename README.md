@@ -43,3 +43,7 @@ function RecipeTemplate({
   data: { sitePage: { pageContext: recipe }},
 }: PageProps<DataProps>) { ... }
 ```
+
+### Deployments
+
+I'm hosting my CMS privately, and will only be locally accessible. I will be looking to use GitHub's self hosted runners to deploy the pages.
