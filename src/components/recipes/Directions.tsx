@@ -10,8 +10,8 @@ export default function Directions({
   // return <pre>{JSON.stringify(directions, null, 2)}</pre>;
   return (
     <div>
-      <h2>Directions</h2>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
+        <h2>Directions</h2>
         {directions.map((direction, index) => (
           <DirectionItem
             index={index}
@@ -33,13 +33,13 @@ function DirectionItem({
 }) {
   return (
     <div>
-      <div className="text-base font-medium">Step #{index + 1}</div>
-      <div
+      <span className="text-base font-medium">{index + 1}. </span>
+      <span
         className="rich-text"
         dangerouslySetInnerHTML={{
           __html: slateToHtml(direction.direction_step_description),
         }}
-      ></div>
+      ></span>
     </div>
   );
 }

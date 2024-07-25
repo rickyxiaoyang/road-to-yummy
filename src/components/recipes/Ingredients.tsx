@@ -9,10 +9,12 @@ export default function Ingredients({
 }) {
   return (
     <div>
-      <h2>Ingredients</h2>
-      {ingredients.map((ingredient) => (
-        <IngredientItem ingredient={ingredient} key={ingredient.id} />
-      ))}
+      <div className="flex flex-col gap-2">
+        <h2>Ingredients</h2>
+        {ingredients.map((ingredient) => (
+          <IngredientItem ingredient={ingredient} key={ingredient.id} />
+        ))}
+      </div>
     </div>
   );
 }
