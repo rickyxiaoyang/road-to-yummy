@@ -9,7 +9,7 @@ export default function Directions({
 }) {
   return (
     <div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <h2>Directions</h2>
         {directions.map((direction, index) => (
           <DirectionItem
@@ -41,7 +41,9 @@ function DirectionItem({
           }}
         ></span>
       </div>
-      {direction.image_url && <img src={direction.image_url} />}
+      {direction.image_url && (
+        <img className="mb-4" src={direction.image_url} />
+      )}
     </div>
   );
 }
