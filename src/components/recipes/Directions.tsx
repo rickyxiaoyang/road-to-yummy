@@ -32,14 +32,17 @@ function DirectionItem({
   direction: Direction;
 }) {
   return (
-    <div>
-      <span className="text-base font-medium">{index + 1}. </span>
-      <span
-        className="rich-text"
-        dangerouslySetInnerHTML={{
-          __html: slateToHtml(direction.direction_step_description),
-        }}
-      ></span>
+    <div className="flex flex-col gap-3">
+      <div>
+        <span className="text-base font-medium">{index + 1}. </span>
+        <span
+          className="rich-text"
+          dangerouslySetInnerHTML={{
+            __html: slateToHtml(direction.direction_step_description),
+          }}
+        ></span>
+      </div>
+      {direction.image_url && <img src={direction.image_url} />}
     </div>
   );
 }

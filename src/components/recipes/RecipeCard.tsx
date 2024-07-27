@@ -14,7 +14,7 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
       <div className="w-full p-5 my-auto">
         <div className="flex flex-col gap-3 items-center text-center">
           <div className="capitalize text-xl font-bold">{recipe.title}</div>
-          <div className="text-base font-thin">{recipe.short_description}</div>
+          <div className="text-sm font-thin">{recipe.short_description}</div>
           <a
             href={`/recipe/${recipe.slug}`}
             className="px-4 py-1 bg-slate-600 hover:bg-slate-400 text-white rounded-2xl text-xs font-thin max-w-fit animate-fade transition-all"

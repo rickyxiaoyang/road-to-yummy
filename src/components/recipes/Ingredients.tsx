@@ -20,11 +20,16 @@ export default function Ingredients({
 }
 
 function IngredientItem({ ingredient }: { ingredient: Ingredient }) {
+  // TODO: make this cleaner
+  const ingredientString = ingredient.quantity
+    ? `${toFraction(ingredient.quantity)} ${
+        ingredient.unit?.toLowerCase() ?? ""
+      } ${ingredient.ingredient}`
+    : ingredient.ingredient;
   return (
     <div className="flex flex-row gap-2">
       <input type="checkbox" />
-      {toFraction(ingredient.quantity)} {ingredient.unit}{" "}
-      {ingredient.ingredient}
+      {ingredientString}
     </div>
   );
 }
