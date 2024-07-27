@@ -7,7 +7,6 @@ export default function Directions({
 }: {
   directions: Recipe["directions"];
 }) {
-  // return <pre>{JSON.stringify(directions, null, 2)}</pre>;
   return (
     <div>
       <div className="flex flex-col gap-2">
